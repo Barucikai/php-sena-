@@ -1,0 +1,127 @@
+<!--
+  ╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╮
+  ┃╰┳┳┳━╮╭┳┳━╮╭━┳╮╭┳┳━╮╭━━┳━┫━┫
+  ┃╋┃╭┫╋╰┫┃┃╋╰┫┃┃┃┃╭┫╋╰┫┃┃┃╋┣━┃
+  ╰━┻╯╰━━╋╮┣━━┻┻━╯╰╯╰━━┻┻┻┻━┻━╯
+  ╱╱╱╱╱╱╱╰━╯
+Brayan Ramos 
+DESARROLLO WEB CON PHP 
+
+░██████╗███████╗███╗░░██╗░█████╗░
+██╔════╝██╔════╝████╗░██║██╔══██╗
+╚█████╗░█████╗░░██╔██╗██║███████║
+░╚═══██╗██╔══╝░░██║╚████║██╔══██║
+██████╔╝███████╗██║░╚███║██║░░██║
+╚═════╝░╚══════╝╚═╝░░╚══╝╚═╝░░╚═╝
+Evidencia/2
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evidencia/2</title>
+</head>
+<body>
+    <h1>Evidencia/2</h1>
+
+    <?php
+    /* Inicio del array */
+    $No1 = array(
+        'nombre'      => 'Juan perez',
+        'telefono'    => '320 8578934',
+        'direcion'    => 'Cra. 45 # 45 - 56',
+        'Fecha'       => '23/12/1997',
+        'color'       => 'Amarillo',
+        'Significado' => 'Riqueza y alegría.'
+    );
+
+    $No2 = array(
+        'nombre'      => 'Pablo Manrique',
+        'telefono'    => '3214567',
+        'direcion'    => 'Clle. 23 # 12 - 19 Sur',
+        'Fecha'       => '12/10/1980',
+        'color'       => 'Verde',
+        'Significado' => 'No se
+        encuentra el significado.'
+    );
+
+    $No3 = array(
+        'nombre'      => 'Nancy Peña ',
+        'telefono'    => '2135423',
+        'direcion'    => 'Av. 34 # 16 - 12 ',
+        'Fecha'       => '07/06/2000',
+        'color'       => 'Rojo',
+        'Significado' => 'No se
+        encuentra el significado.'
+    );
+    /* Fin del array */
+    ?>
+    
+    <style>
+        *{
+            background-color: black;
+            position: relative;
+            padding: 50px;
+        }
+        h1, h3 ,table, text{
+            color: blanchedalmond;
+        }
+        table, th, td{
+            border: 1px solid brown;
+            width: 10%;
+        }
+        
+    </style>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Direcion</th>
+            <th>FechaCumple</th>
+            <th>Color</th>
+            <th>Significado</th>
+        </tr>
+        <tr>
+        
+            <?php 
+            /* Inicio del foreach */
+            foreach ($No1 as $Nun1) { ?>
+
+              <td><?php echo $Nun1 ?></td> // Se muestra todos los datos del primer arreglo, en la primera fila 1
+
+            <?php }
+
+            /* Fin del foreach */
+
+            ?>    
+        </tr>
+        <tr>
+            <?php 
+            /* Inicio del foreach */ 
+            foreach ($No2 as $Nun2) { ?>
+
+              <td><?php echo $Nun2 ?></td> // Se muestra todos los datos del primer arreglo, en la primera fila 2
+
+            <?php } 
+            /* Fin del foreach */
+
+            ?>
+        </tr>
+        <tr>
+       
+            <?php 
+            /* Inicio del foreach */
+            foreach ($No3 as $Nun3) { ?>
+
+              <td><?php echo $Nun3 ?></td> // Se muestra todos los datos del primer arreglo, en la primera fila 3
+
+            <?php }
+            /* Fin del foreach */
+
+            ?>
+        </tr>
+    </table>
+</body>
+</html>
